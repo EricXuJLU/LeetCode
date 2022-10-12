@@ -365,6 +365,59 @@ func areAlmostEqual(s1 string, s2 string) bool {
 	return false
 }
 
+// Day 12
+/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
+func numComponents(head *ListNode, nums []int) int {
+	// Solution 1
+	//var grp []int
+	//for p := head; p != nil; p = p.Next {
+	//	grp = append(grp, p.Val)
+	//}
+	//used := make([]bool, len(grp))
+	//for _, num := range nums {
+	//	for i, val := range grp {
+	//		if num == val {
+	//			used[i] = true
+	//		}
+	//	}
+	//}
+	//ret := 0
+	//for i := 1; i < len(used); i++ {
+	//	if used[i-1] && !used[i] {
+	//		ret++
+	//	}
+	//}
+	//if used[len(used)-1] {
+	//	ret++
+	//}
+	//return ret
+
+	// Solution 2
+	mp := make(map[int]bool)
+	for _, v := range nums {
+		mp[v] = true
+	}
+	cnt := 0
+	for p, last := head, false; p != nil; p = p.Next {
+		if mp[p.Val] && !last {
+			cnt++
+		}
+		last = mp[p.Val]
+	}
+	return cnt
+}
+
 func main() {
 	//fmt.Println(reformatNumber("1-23-45 6"))	//"123-456"
 	//fmt.Println(reformatNumber("123 4-567"))	//"123-45-67"
