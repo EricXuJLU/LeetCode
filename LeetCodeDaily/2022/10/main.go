@@ -365,7 +365,7 @@ func areAlmostEqual(s1 string, s2 string) bool {
 	return false
 }
 
-// Day 12
+// Day 12 827
 /**
  * Definition for singly-linked list.
  * type ListNode struct {
@@ -373,6 +373,7 @@ func areAlmostEqual(s1 string, s2 string) bool {
  *     Next *ListNode
  * }
  */
+
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -416,6 +417,34 @@ func numComponents(head *ListNode, nums []int) int {
 		last = mp[p.Val]
 	}
 	return cnt
+}
+
+// Day 13 769
+func maxChunksToSorted(arr []int) int {
+	head, cnt := 0, 0
+	for i := 0; i < len(arr); i++ {
+		if day13(arr[head:i+1], head) {
+			cnt++
+			head = i + 1
+		}
+	}
+	return cnt
+}
+
+func day13(arr []int, base int) bool {
+	exist := make([]bool, len(arr))
+	for _, a := range arr {
+		if id := a - base; id >= len(arr) {
+			return false
+		} else {
+			if exist[id] {
+				return false
+			} else {
+				exist[id] = true
+			}
+		}
+	}
+	return true
 }
 
 func main() {
