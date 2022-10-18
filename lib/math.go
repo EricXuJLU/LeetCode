@@ -1,5 +1,7 @@
 package lib
 
+import "math"
+
 // CommonFactors 两个正整数的所有公因数
 func CommonFactors(a int, b int) []int {
 	xiao := b
@@ -8,7 +10,7 @@ func CommonFactors(a int, b int) []int {
 	}
 	var ret []int
 	for i := 1; i <= xiao; i++ {
-		if a/i*i==a &&  b/i*i==b {
+		if a/i*i == a && b/i*i == b {
 			ret = append(ret, i)
 		}
 	}
@@ -41,4 +43,8 @@ func MinElement(a []float32) (index int, ans float32) {
 		}
 	}
 	return index, a[index]
+}
+
+func PowInt(a, b int) int {
+	return int(math.Pow(float64(a), float64(b)))
 }
