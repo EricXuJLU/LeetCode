@@ -42,9 +42,12 @@ func main() {
 	//fmt.Println(threeEqualParts([]int{1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1}))
 
 	//fmt.Println(buildArray([]int{1, 3}, 3))
-	fmt.Println(atMostNGivenDigitSet([]string{"1", "3", "5", "7"}, 100))
-	fmt.Println(atMostNGivenDigitSet([]string{"1", "4", "9"}, 1000000000))
-	fmt.Println(atMostNGivenDigitSet([]string{"7"}, 8))
-	fmt.Println(atMostNGivenDigitSet([]string{"3", "5"}, 4))
-	fmt.Println(atMostNGivenDigitSet([]string{"3", "4", "8"}, 4))
+	//fmt.Println(atMostNGivenDigitSet([]string{"1", "3", "5", "7"}, 100))
+	//fmt.Println(atMostNGivenDigitSet([]string{"1", "4", "9"}, 1000000000))
+	//fmt.Println(atMostNGivenDigitSet([]string{"7"}, 8))
+	//fmt.Println(atMostNGivenDigitSet([]string{"3", "5"}, 4))
+	//fmt.Println(atMostNGivenDigitSet([]string{"3", "4", "8"}, 4))
+
+	fmt.Println(countStudents([]int{1, 1, 0, 0}, []int{0, 1, 0, 1}))
+	fmt.Println(countStudents([]int{1, 1, 1, 0, 0, 1}, []int{1, 0, 0, 0, 1, 1}))
 }

@@ -85,3 +85,32 @@ func Max(a, b int) int {
 	}
 	return b
 }
+
+// Day19 1700
+func countStudents(students []int, sandwiches []int) int {
+	eated := make([]bool, len(students))
+	var xs, smz = 0, 0
+	for smz < len(sandwiches) {
+		for lazy := xs; ; {
+			if eated[xs] == true {
+				xs = (xs + 1) % len(students)
+				if xs == lazy {
+					return len(sandwiches) - smz
+				}
+				continue
+			}
+			if students[xs] == sandwiches[smz] {
+				eated[xs] = true
+				xs = (xs + 1) % len(students)
+				smz++
+				break
+			} else {
+				xs = (xs + 1) % len(students)
+				if xs == lazy {
+					return len(sandwiches) - smz
+				}
+			}
+		}
+	}
+	return 0
+}

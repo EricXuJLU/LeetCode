@@ -45,6 +45,7 @@ func MinElement(a []float32) (index int, ans float32) {
 	return index, a[index]
 }
 
+// PowInt int型的幂次函数，注意返回值也在int范围
 func PowInt(a, b int) int {
 	return int(math.Pow(float64(a), float64(b)))
 }
