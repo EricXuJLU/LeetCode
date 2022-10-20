@@ -114,3 +114,17 @@ func countStudents(students []int, sandwiches []int) int {
 	}
 	return 0
 }
+
+// Day20 779
+func kthGrammar(n int, k int) int {
+	k--
+	n--
+	ans := 0
+	for ; n > 0; n-- {
+		if k&1 == 1 {
+			ans = 1 - ans
+		}
+		k = k >> 1
+	}
+	return ans
+}
