@@ -47,3 +47,17 @@ func jobScheduling(startTime []int, endTime []int, profit []int) int {
 	}
 	return ans
 }
+
+// Day23 1768
+func mergeAlternately(word1 string, word2 string) string {
+	var ans []byte
+	for i := 0; i < len(word1) || i < len(word2); i++ {
+		if i < len(word1) {
+			ans = append(ans, word1[i])
+		}
+		if i < len(word2) {
+			ans = append(ans, word2[i])
+		}
+	}
+	return string(ans)
+}
