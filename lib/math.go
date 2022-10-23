@@ -20,7 +20,7 @@ func CommonFactors(a int, b int) []int {
 // MaxElement 求最大元素
 func MaxElement(a []float32) (index int, ans float32) {
 	if len(a) == 0 {
-		panic("Error No Elements!")
+		return -1, 0
 	}
 	index = 0
 	for i := 1; i < len(a); i++ {
@@ -34,7 +34,7 @@ func MaxElement(a []float32) (index int, ans float32) {
 // MinElement 求最小元素
 func MinElement(a []float32) (index int, ans float32) {
 	if len(a) == 0 {
-		panic("Error No Elements!")
+		return -1, 0
 	}
 	index = 0
 	for i := 1; i < len(a); i++ {
