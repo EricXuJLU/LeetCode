@@ -61,3 +61,32 @@ func mergeAlternately(word1 string, word2 string) string {
 	}
 	return string(ans)
 }
+
+// Day24 915
+func partitionDisjoint(nums []int) int {
+	leftMax, rightMin := make([]int, len(nums)), make([]int, len(nums))
+	leftMax[0], rightMin[len(nums)-1] = nums[0], nums[len(nums)-1]
+	for i := 1; i < len(nums); i++ {
+		leftMax[i] = max(leftMax[i-1], nums[i])
+		rightMin[len(nums)-1-i] = min(rightMin[len(nums)-i], nums[len(nums)-1-i])
+	}
+	for i := 0; i < len(nums)-1; i++ {
+		if leftMax[i] <= rightMin[i+1] {
+			return i+1
+		}
+	}
+	return len(nums)
+}
+
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
+}

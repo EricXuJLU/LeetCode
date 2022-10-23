@@ -208,9 +208,3 @@ func minSwap(nums1 []int, nums2 []int) int {
 	return min(dp[len(nums1)-1][0], dp[len(nums1)-1][1])
 }
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
