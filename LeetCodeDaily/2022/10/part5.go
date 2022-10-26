@@ -72,7 +72,7 @@ func partitionDisjoint(nums []int) int {
 	}
 	for i := 0; i < len(nums)-1; i++ {
 		if leftMax[i] <= rightMin[i+1] {
-			return i+1
+			return i + 1
 		}
 	}
 	return len(nums)
@@ -89,4 +89,19 @@ func min(a, b int) int {
 		return a
 	}
 	return b
+}
+
+// Day25 934
+func shortestBridge(grid [][]int) int {
+	//BFS
+	//n := len(grid)
+	//for {
+	//	v := 2
+	//	for i := 0; i < n; i++ {
+	//		for j := 0; j < n; j++ {
+	//			if
+	//		}
+	//	}
+	//}
+	return -1
 }
