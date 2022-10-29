@@ -51,7 +51,12 @@ func main() {
 	//fmt.Println(countStudents([]int{1, 1, 0, 0}, []int{0, 1, 0, 1}))
 	//fmt.Println(countStudents([]int{1, 1, 1, 0, 0, 1}, []int{1, 0, 0, 0, 1, 1}))
 
-	fmt.Println(jobScheduling([]int{1, 1, 1}, []int{2, 3, 4}, []int{5, 6, 4}))                          //6
-	fmt.Println(jobScheduling([]int{1, 2, 3, 3}, []int{3, 4, 5, 6}, []int{50, 10, 40, 70}))             //120
-	fmt.Println(jobScheduling([]int{1, 2, 3, 4, 6}, []int{3, 5, 10, 6, 9}, []int{20, 20, 100, 70, 60})) //150
+	//fmt.Println(jobScheduling([]int{1, 1, 1}, []int{2, 3, 4}, []int{5, 6, 4}))                          //6
+	//fmt.Println(jobScheduling([]int{1, 2, 3, 3}, []int{3, 4, 5, 6}, []int{50, 10, 40, 70}))             //120
+	//fmt.Println(jobSchedulingx([]int{1, 2, 3, 4, 6}, []int{3, 5, 10, 6, 9}, []int{20, 20, 100, 70, 60})) //150
+
+	//fmt.Println(sumSubarrayMins([]int{3, 1, 2, 4}))
+	//fmt.Println(sumSubarrayMins([]int{11, 81, 94, 43, 3}))
+	fmt.Println(letterCasePermutation("a1b2"))
+	fmt.Println(letterCasePermutation("3z4"))
 }
