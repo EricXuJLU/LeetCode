@@ -42,6 +42,14 @@ func main() {
 	//fmt.Println(makeSimilar([]int{8,12,6}, []int{2,14,10}))
 	//fmt.Println(makeSimilar([]int{1,2,5}, []int{4,1,3}))
 	//fmt.Println(makeSimilar([]int{1,1,1,1,1}, []int{1,1,1,1,1}))
-	fmt.Println(makeSimilar([]int{758,334,402,1792,1112,1436,1534,1702,1538,1427,720,1424,114,1604,564,120,578},
-							[]int{1670,216,1392,1828,1104,464,678,1134,644,1178,1150,1608,1799,1156,244,2,892}))
+	//fmt.Println(makeSimilar([]int{758,334,402,1792,1112,1436,1534,1702,1538,1427,720,1424,114,1604,564,120,578},
+	//						[]int{1670,216,1392,1828,1104,464,678,1134,644,1178,1150,1608,1799,1156,244,2,892}))
+	n7 := &TreeNode{7, nil, nil}
+	n6 := &TreeNode{6, nil, nil}
+	n5 := &TreeNode{5, nil, n7}
+	n4 := &TreeNode{4, n6, n5}
+	n2 := &TreeNode{2, nil, nil}
+	n3 := &TreeNode{3, n2, nil}
+	n1 := &TreeNode{1, n3, n4}
+	fmt.Println(treeQueries(n1, []int{4}))
 }
